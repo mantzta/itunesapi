@@ -1,0 +1,67 @@
+$distance: 10px;
+
+.app {
+  font: 14px sans-serif;
+  line-height: 18px;
+}
+
+.search {
+  &__wrapper {
+    padding: 50px;
+    text-align: center;
+  }
+
+  &__field {
+    border: 1px solid #eee;
+    padding: 20px;
+    width: 50%;
+    font-size: 26px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+  }
+
+  &__button {
+    @extend .search__field;
+    width: auto;
+
+    &:hover {
+      background: #ccc;
+    }
+  }
+}
+
+.results {
+  &__content {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+
+    &--listView {
+      display: block;
+
+      .album {
+        width: calc(100% - 40px);
+        min-width: 100px;
+      }
+    }
+  }
+
+  &__pagination,
+  &__changeView{
+    margin: $distance;
+  }
+}
+
+.album {
+  border: 1px solid #eee;
+  width: calc(33% - 41px);
+  min-width: 200px;
+  padding: 10px;
+  margin: $distance;
+
+  &__artist {
+    font-size: 18px;
+    margin: 15px 0;
+    line-height: 24px;
+  }
+}

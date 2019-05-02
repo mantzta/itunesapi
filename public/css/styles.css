@@ -1,0 +1,44 @@
+.app {
+  font: 14px sans-serif;
+  line-height: 18px; }
+
+.search__wrapper {
+  padding: 50px;
+  text-align: center; }
+
+.search__field, .search__button {
+  border: 1px solid #eee;
+  padding: 20px;
+  width: 50%;
+  font-size: 26px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px; }
+
+.search__button {
+  width: auto; }
+  .search__button:hover {
+    background: #ccc; }
+
+.results__content {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap; }
+  .results__content--listView {
+    display: block; }
+    .results__content--listView .album {
+      width: calc(100% - 40px);
+      min-width: 100px; }
+
+.results__pagination, .results__changeView {
+  margin: 10px; }
+
+.album {
+  border: 1px solid #eee;
+  width: calc(33% - 41px);
+  min-width: 200px;
+  padding: 10px;
+  margin: 10px; }
+  .album__artist {
+    font-size: 18px;
+    margin: 15px 0;
+    line-height: 24px; }

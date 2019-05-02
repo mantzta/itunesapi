@@ -1,0 +1,34 @@
+{
+  "name": "frontendtest",
+  "version": "1.0.0",
+  "description": "Frontend test iTunes API",
+  "main": "server.js",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "axios-jsonp": "^1.0.2",
+    "express": "^4.16.4"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.3.1",
+    "babelify": "^10.0.0",
+    "browserify": "^16.2.3",
+    "node-sass": "^4.11.0",
+    "nodemon": "^1.18.9"
+  },
+  "scripts": {
+    "buildjs": "browserify src/app.js -t babelify --outfile public/js/bundle.js",
+    "buildcss": "node-sass --include-path sass src/app.scss public/css/styles.css",
+    "start": "npm run buildjs && npm run buildcss && nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Tamara Mantz",
+  "license": "ISC",
+  "babel": {
+    "presets": [
+      [
+        "@babel/preset-env"
+      ]
+    ]
+  }
+}
